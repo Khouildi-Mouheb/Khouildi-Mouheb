@@ -1,63 +1,120 @@
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Mouheb Khouildi — terminal banner">
-  <style>
-    .mono { font-family: "JetBrains Mono", "Fira Code", Consolas, "Courier New", monospace; }
-    .prompt { fill: #3fb950; }
-    .path { fill: #58a6ff; }
-    .cmd { fill: #e6edf3; }
-    .dim { fill: #7d8590; }
-    .name { fill: #e6edf3; font-weight: 700; }
-    .accent { fill: #f0883e; }
-    .line1 { clip-path: url(#reveal1); }
-    .line2 { opacity: 0; animation: fade 0.4s ease forwards 2.2s; }
-    .line3 { opacity: 0; animation: fade 0.4s ease forwards 2.7s; }
-    .line4 { opacity: 0; animation: fade 0.4s ease forwards 3.2s; }
-    .cursor { animation: blink 1s steps(1) infinite; }
-    @keyframes fade { to { opacity: 1; } }
-    @keyframes blink { 50% { opacity: 0; } }
-    @keyframes type { from { width: 0; } to { width: 760px; } }
-    #revealRect { animation: type 2s steps(46) forwards; }
-  </style>
+<p align="center">
+  <img src="./banner.svg" alt="mouheb@enit:~$ ./boot --ai --systems --security" width="100%">
+</p>
 
-  <defs>
-    <clipPath id="reveal1"><rect id="revealRect" x="40" y="70" width="0" height="40"/></clipPath>
-    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#3fb950" stop-opacity="0.15"/>
-      <stop offset="1" stop-color="#58a6ff" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
+```console
+mouheb@enit:~$ systemctl status mouheb.service
+● mouheb.service - Computer Engineering Student @ ENIT
+     Loaded: loaded (/home/bizerte/tunisia; enabled; vendor preset: curious)
+     Active: active (building) since 2022
+       Docs: linkedin.com/in/mouheb-khouildi
+   Main PID: 2026 (looking-for-a-pfe)
+      Tasks: 4 repos — forecasting, social-media-microservices, MatchingJavaApp, Linux-toolkit
+     Memory: Python · Django · FastAPI · LLMs · Docker · Linux
+     CGroup: /ai/systems/security
 
-  <!-- window -->
-  <rect x="0.5" y="0.5" width="1199" height="299" rx="14" fill="#0d1117" stroke="#30363d"/>
-  <rect x="0.5" y="0.5" width="1199" height="40" rx="14" fill="#161b22"/>
-  <rect x="0.5" y="26" width="1199" height="15" fill="#161b22"/>
-  <circle cx="26" cy="21" r="6" fill="#ff5f56"/>
-  <circle cx="46" cy="21" r="6" fill="#ffbd2e"/>
-  <circle cx="66" cy="21" r="6" fill="#27c93f"/>
-  <text x="600" y="26" text-anchor="middle" class="mono dim" font-size="13">mouheb@enit: ~ — bash</text>
+Nov 09 mouheb[2026]: I like building AI products end to end — from architecture to deployment.
+Nov 09 mouheb[2026]: Lately obsessed with agents, RAG, and systems that fix themselves.
+Nov 09 mouheb[2026]: Breaking things on purpose to understand them (security edition).
+```
 
-  <!-- line 1: typed command -->
-  <g class="line1 mono" font-size="22">
-    <text x="40" y="97"><tspan class="prompt">mouheb@enit</tspan><tspan class="dim">:</tspan><tspan class="path">~</tspan><tspan class="dim">$ </tspan><tspan class="cmd">./boot --ai --systems --security</tspan></text>
-  </g>
+<br>
 
-  <!-- output -->
-  <rect class="line2" x="40" y="122" width="700" height="62" fill="url(#glow)"/>
-  <text class="line2 mono name" x="56" y="168" font-size="44">Mouheb Khouildi</text>
-  <text class="line3 mono" x="56" y="210" font-size="19"><tspan class="dim">[</tspan><tspan class="prompt"> OK </tspan><tspan class="dim">]</tspan><tspan class="cmd"> Computer Engineering student @ ENIT, Tunis</tspan></text>
-  <text class="line4 mono" x="56" y="242" font-size="19"><tspan class="dim">[</tspan><tspan class="prompt"> OK </tspan><tspan class="dim">]</tspan><tspan class="cmd"> Building AI agents, RAG systems &amp; reliable backends</tspan></text>
+## `$ kubectl get repos -n mouheb`
 
-  <!-- final prompt with blinking cursor -->
-  <text class="line4 mono" x="40" y="280" font-size="18"><tspan class="prompt">mouheb@enit</tspan><tspan class="dim">:</tspan><tspan class="path">~</tspan><tspan class="dim">$ </tspan></text>
-  <rect class="line4 cursor" x="208" y="265" width="11" height="20" fill="#e6edf3"/>
+```console
+NAME                          STATUS      TYPE            STACK
+forecasting                   Completed   internship      Python · FastAPI · Prophet · XGBoost
+social-media-microservices    Completed   backend         Node.js · Express · MongoDB · JWT
+MatchingJavaApp               Completed   java            Java · Jaro-Winkler · strategy pattern
+Linux-toolkit                 Running     sysadmin        Bash · Ubuntu
+```
 
-  <!-- side decoration: tiny status panel -->
-  <g class="line3 mono" font-size="14">
-    <rect x="860" y="78" width="300" height="190" rx="10" fill="#161b22" stroke="#30363d"/>
-    <text x="880" y="106" class="dim">$ uptime</text>
-    <text x="880" y="132" class="cmd">load: <tspan class="accent">coffee</tspan>, <tspan class="accent">code</tspan>, <tspan class="accent">ship</tspan></text>
-    <text x="880" y="166" class="dim">$ cat location</text>
-    <text x="880" y="192" class="cmd">Bizerte, Tunisia</text>
-    <text x="880" y="226" class="dim">$ cat status</text>
-    <text x="880" y="252" class="prompt">● open to PFE &amp; internships</text>
-  </g>
-</svg>
+<details open>
+<summary><b> <a href="https://github.com/Khouildi-Mouheb/forecasting">forecasting</a></b> — two models compete, the best one predicts your stock</summary>
+<br>
+
+A stateless demand-forecasting microservice I built at **JCD Commerce** for their multi-tenant ERP SaaS. The ERP sends a product's history, and the service sends back a forecast with confidence bounds.
+
+- **Prophet vs. XGBoost:** both are benchmarked on holdout data (MAE, RMSE, MAPE, R²) and a `ModelSelector` serves the champion, falling back if a model fails to converge
+- **XGBoost features:** calendar signals, lags 1–7, rolling mean and std, recursive multi-step forecasting
+- **Clean pipeline:** daily reindexing with zero-filling, same-day aggregation, negative-stock anomaly removal
+- **Hexagonal architecture** with a FastAPI driving adapter, Swagger docs at `/docs`, tested with pytest
+
+```http
+POST /api/v1/forecast   { "itemId": "...", "horizon": 7, "modelType": null, "history": [...] }
+```
+</details>
+
+<details>
+<summary><b> <a href="https://github.com/Khouildi-Mouheb/social-media-microservices">social-media-microservices</a></b> — a social network backend split into six services</summary>
+<br>
+
+A REST backend for a social media app where every feature lives in its own Node.js service, behind one API gateway.
+
+```console
+gateway :3000  ──▶  users · posts · stories · comments · friendships
+```
+
+- **Gateway** routes `/api/*` requests and handles JWT authentication
+- **Users:** registration, login, profiles, follow / unfollow
+- **Posts & comments:** posts, nested replies, likes
+- **Stories:** ephemeral stories with view tracking
+- **Friendships:** full request workflow (send, accept, reject, cancel) with mutual friends
+- Node.js + Express + MongoDB, JWT auth
+</details>
+
+<details>
+<summary><b> <a href="https://github.com/Khouildi-Mouheb/MatchingJavaApp">MatchingJavaApp</a></b> — fuzzy name matching in Java</summary>
+<br>
+
+A modular engine where every stage is swappable: **preprocessing** (normalization, phonetic), **candidate generation**, **comparison** (exact, Jaro-Winkler) and **selection** (threshold or top-N), over CSV datasets.
+</details>
+
+<details>
+<summary><b> <a href="https://github.com/Khouildi-Mouheb/Linux-toolkit">Linux-toolkit</a></b> — my growing box of Bash tools</summary>
+<br>
+
+Command-line utilities for automation, system administration and security, written in Bash on Ubuntu.
+</details>
+
+<br>
+
+## `$ cat ~/.stack.yaml`
+
+```yaml
+languages:   [Python, Java, C, JavaScript/TypeScript, SQL, Bash, Dart]
+backend:     [Django, FastAPI, Flask, Node.js, React]
+ai:          [LLMs, RAG, ChromaDB, Transformers, scikit-learn, TensorFlow, XGBoost, Prophet]
+infra:       [Linux, Docker, Kubernetes, Nginx, Azure Container Apps, Datadog, k6]
+security:    [Wireshark, Nmap, iptables, OpenSSL, Kali Linux, Burp Suite, Metasploit]
+databases:   [PostgreSQL, Oracle, MongoDB, SQLite]
+learning:    [local LLMs, observability, self-healing systems]
+```
+
+<br>
+
+## `$ journalctl -u mouheb --since 2022`
+
+```console
+2022  ▸ joined IPEIG prépa in Gabès — two years of maths, physics and sleepless nights
+2024  ▸ entered ENIT, Computer Engineering
+2026  ▸ AI / forecasting intern at JCD Commerce
+2026  ▸ shipped a forecasting microservice into a real ERP
+now   ▸ looking for a PFE in AI systems, SRE or security   ← you are here
+```
+
+<br>
+
+## `$ ./contact.sh`
+
+<p>
+  <a href="https://linkedin.com/in/mouheb-khouildi"><img src="https://img.shields.io/badge/linkedin-mouheb--khouildi-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117"></a>
+  <a href="mailto:khouildimouheb6@gmail.com"><img src="https://img.shields.io/badge/mail-khouildimouheb6@gmail.com-3fb950?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117"></a>
+</p>
+
+```console
+mouheb@enit:~$ echo "got an interesting problem? let's talk."
+got an interesting problem? let's talk.
+mouheb@enit:~$ █
+```
